@@ -1,4 +1,4 @@
-# TechTrioHub
+
 
 A backbone for your coding challenge.
 
@@ -59,5 +59,3 @@ npm run test # run project tests under `cypress/integration`
 ```
 
 ---
-
-Authored by [Alva Labs](https://www.alvalabs.io/).
