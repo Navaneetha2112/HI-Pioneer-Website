@@ -9,9 +9,10 @@ export function Home() {
     <div className="page">
       <section className="hero">
         <div className="hero-content">
-          <h1>Welcome to HPT Solutions</h1>
-          <p>Transforming Businesses Through Technology & Innovation</p>
-          <button className="cta-button">Get Started</button>
+          <div className="hero-badge">Launching Soon</div>
+          <h1>Welcome to HPT Solutions — HiPioneer Technologies</h1>
+          <p>HiPioneer Technologies is building a modern startup services platform for consulting, app development, and training.</p>
+          <button className="cta-button" onClick={handleGetStarted}>Get Started</button>
         </div>
       </section>
       
