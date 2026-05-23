@@ -26,14 +26,13 @@ export function Contact() {
     setError(null);
     setSuccess(false);
 
-    try {
-      // WhatsApp number is optional; email delivery is always sent.
-      const response = await fetch('http://localhost:8080/api/contact/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
+    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    const submitUrl = isLocal
+      ? 'http://localhost:8080/api/contact/submit'
+      : 'https://formsubmit.co/ajax/navaneetha211201@gmail.com';
+
+    const payload = isLocal
+      ? {
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
@@ -41,7 +40,28 @@ export function Contact() {
           company: formData.company,
           subject: formData.subject,
           message: formData.message
-        })
+        }
+      : {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          phoneNumber: formData.phoneNumber,
+          company: formData.company,
+          subject: formData.subject,
+          message: formData.message,
+          _subject: `New contact from ${formData.name}`,
+          _replyto: formData.email,
+          _captcha: 'false'
+        };
+
+    try {
+      const response = await fetch(submitUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          ...(isLocal ? {} : { Accept: 'application/json' })
+        },
+        body: JSON.stringify(payload)
       });
 
       if (!response.ok) {
