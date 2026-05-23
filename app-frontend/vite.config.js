@@ -2,6 +2,7 @@ import {defineConfig} from "vite";
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
+    base: '/HI-Pioneer-Website/',
     plugins: [react()],
     build: {
         outDir: './build',
