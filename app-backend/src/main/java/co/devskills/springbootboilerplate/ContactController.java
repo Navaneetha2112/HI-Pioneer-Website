@@ -7,13 +7,16 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/contact")
+@RequestMapping("/contact")
 @Slf4j
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ContactController {
     
     @Autowired
     private ContactRepository contactRepository;
+    
+    @Autowired
+    private EmailService emailService;
     
     @Autowired
     private WhatsAppService whatsAppService;
@@ -26,7 +29,6 @@ public class ContactController {
             // Validate required fields
             if (contactRequest.getName() == null || contactRequest.getName().isEmpty() ||
                 contactRequest.getEmail() == null || contactRequest.getEmail().isEmpty() ||
-                contactRequest.getPhoneNumber() == null || contactRequest.getPhoneNumber().isEmpty() ||
                 contactRequest.getSubject() == null || contactRequest.getSubject().isEmpty() ||
                 contactRequest.getMessage() == null || contactRequest.getMessage().isEmpty()) {
                 
@@ -48,13 +50,26 @@ public class ContactController {
             Contact savedContact = contactRepository.save(contact);
             log.info("Contact saved with ID: {}", savedContact.getId());
             
-            // Send WhatsApp notification
-            whatsAppService.sendWhatsAppNotification(savedContact);
+            // Send email notification
+            try {
+                emailService.sendContactEmail(savedContact);
+            } catch (Exception emailException) {
+                log.error("Email sending failed: {}", emailException.getMessage(), emailException);
+            }
+
+            // Send WhatsApp notification if a WhatsApp number is provided
+            if (savedContact.getPhoneNumber() != null && !savedContact.getPhoneNumber().isEmpty()) {
+                try {
+                    whatsAppService.sendWhatsAppNotification(savedContact);
+                } catch (Exception whatsappException) {
+                    log.error("WhatsApp notification failed: {}", whatsappException.getMessage(), whatsappException);
+                }
+            }
             
             return ResponseEntity.ok(
                 new ContactResponse(
                     savedContact.getId(),
-                    "Thank you for contacting HPT Solutions! We'll get back to you soon via WhatsApp.",
+                    "Thank you for contacting HPT Solutions! Your message has been received and we will respond soon.",
                     true,
                     "SUCCESS"
                 )
