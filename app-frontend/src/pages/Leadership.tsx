@@ -2,23 +2,23 @@ export function Leadership() {
   const leaders = [
     {
       id: 1,
-      name: 'John Smith',
+      name: 'Priya Nair',
       title: 'CEO & Founder',
-      bio: 'Visionary leader with 20+ years of technology industry experience',
+      bio: 'Product-led founder with startup experience and a focus on rapid, user-centered delivery.',
       image: '👔'
     },
     {
       id: 2,
-      name: 'Sarah Johnson',
-      title: 'CTO',
-      bio: 'Tech innovator and architect of enterprise solutions',
+      name: 'Arjun Patel',
+      title: 'Chief Technology Officer',
+      bio: 'Technology leader who builds scalable platforms and modern engineering teams.',
       image: '💻'
     },
     {
       id: 3,
-      name: 'Michael Chen',
-      title: 'VP of Consulting',
-      bio: 'Strategic business consultant with proven track record',
+      name: 'Nithya Rao',
+      title: 'Head of Consulting',
+      bio: 'Business strategist who turns product strategy into operational execution.',
       image: '📊'
     },
   ];
@@ -27,7 +27,7 @@ export function Leadership() {
     <div className="page">
       <section className="content-section">
         <h1>Leadership Team</h1>
-        <p>Meet the talented leaders guiding HPT Solutions</p>
+        <p>Our founders and leaders combine startup experience with hands-on technology execution.</p>
 
         <div className="team-grid">
           {leaders.map(leader => (

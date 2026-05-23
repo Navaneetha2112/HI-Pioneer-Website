@@ -2,26 +2,26 @@ export function WhitePapers() {
   const papers = [
     {
       id: 1,
-      title: 'Digital Transformation Roadmap for Enterprises',
-      description: 'A comprehensive guide for planning and executing successful digital transformation',
+      title: 'Startup Guide to Building Your First SaaS Product',
+      description: 'A step-by-step framework for validating ideas, building MVPs, and launching quickly.',
       pages: 24
     },
     {
       id: 2,
-      title: 'Cloud Migration Strategy & Best Practices',
-      description: 'Detailed strategies for successfully migrating legacy systems to cloud environments',
+      title: 'Cloud Strategy for Growing Tech Teams',
+      description: 'How startups can adopt cloud platforms safely while minimizing cost and complexity.',
       pages: 18
     },
     {
       id: 3,
-      title: 'Building Secure APIs in Modern Applications',
-      description: 'Security considerations and implementation patterns for REST and GraphQL APIs',
+      title: 'Creating Secure APIs for Product Growth',
+      description: 'Practical security patterns for API-driven products and integrations.',
       pages: 20
     },
     {
       id: 4,
-      title: 'DevOps Excellence: A Complete Guide',
-      description: 'From CI/CD to infrastructure automation and monitoring best practices',
+      title: 'Modern DevOps for Fast-Moving Teams',
+      description: 'Automation, deployment, and observability playbooks for startup engineering teams.',
       pages: 28
     },
   ];

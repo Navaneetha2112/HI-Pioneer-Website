@@ -183,6 +183,7 @@
     background: #1a1a2e;
     flex-direction: column;
     padding: 1rem 1.5rem;
+    z-index: 999;
   }
 
   .navbar-menu.mobile-open {
@@ -196,5 +197,31 @@
 
   .dropdown-menu {
     min-width: 150px;
+  }
+}
+
+/* Mobile: make dropdowns stack and use solid background for readability */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    padding-left: 0;
+    margin: 0.25rem 0 0 0;
+  }
+
+  .dropdown-link {
+    display: block;
+    width: 100%;
+    padding: 0.55rem 0.75rem;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.02);
+    color: #ffffff;
+    margin: 0.15rem 0;
+  }
+
+  .navbar-menu .dropdown-link:hover {
+    background: rgba(0,212,255,0.06);
+    color: #00d4ff;
   }
 }

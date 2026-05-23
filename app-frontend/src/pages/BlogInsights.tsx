@@ -2,30 +2,30 @@ export function BlogInsights() {
   const articles = [
     {
       id: 1,
-      title: 'The Future of Cloud Computing',
-      date: 'May 10, 2024',
-      excerpt: 'Exploring emerging trends in cloud technology and their business implications',
-      category: 'Cloud'
+      title: 'How Startups Can Launch Digital Products Faster',
+      date: 'May 10, 2026',
+      excerpt: 'Practical advice on building minimum viable products, testing ideas, and scaling quickly.',
+      category: 'Product'
     },
     {
       id: 2,
-      title: 'AI-Powered Development: What You Need to Know',
-      date: 'May 5, 2024',
-      excerpt: 'How artificial intelligence is transforming the software development landscape',
-      category: 'AI/ML'
+      title: 'Choosing the Right Cloud Strategy for Growth',
+      date: 'May 5, 2026',
+      excerpt: 'The cloud architecture decisions every growing business should make early on.',
+      category: 'Cloud'
     },
     {
       id: 3,
-      title: 'Microservices Architecture Best Practices',
-      date: 'April 28, 2024',
-      excerpt: 'Building scalable applications with microservices design patterns',
-      category: 'Architecture'
+      title: 'From Prototype to Production: Engineering Best Practices',
+      date: 'April 28, 2026',
+      excerpt: 'A practical approach to building resilient applications and launching them with confidence.',
+      category: 'Development'
     },
     {
       id: 4,
-      title: 'Cybersecurity in 2024: New Threats and Solutions',
-      date: 'April 20, 2024',
-      excerpt: 'Understanding modern security challenges and protection strategies',
+      title: 'Why Security Must Be Built Into Your Startup Product',
+      date: 'April 20, 2026',
+      excerpt: 'How to protect user data and stay aligned with regulatory best practices.',
       category: 'Security'
     },
   ];
@@ -33,8 +33,8 @@ export function BlogInsights() {
   return (
     <div className="page">
       <section className="content-section">
-        <h1>HPT Insights</h1>
-        <p>Stay updated with the latest technology trends and best practices</p>
+        <h1>HiPioneer Insights</h1>
+        <p>Read our startup-ready articles on product strategy, cloud engineering, and modern development.</p>
 
         <div className="blog-list">
           {articles.map(article => (

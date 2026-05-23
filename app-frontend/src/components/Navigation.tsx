@@ -11,6 +11,10 @@ export function Navigation() {
   };
 
   const toggleMobile = () => setMobileOpen(!mobileOpen);
+  const handleLinkClick = () => {
+    if (mobileOpen) setMobileOpen(false);
+    setActiveDropdown(null);
+  };
 
   return (
     <nav className="navbar">
@@ -23,7 +27,7 @@ export function Navigation() {
         </button>
         <ul className={`navbar-menu ${mobileOpen ? 'mobile-open' : ''}`}>
           <li className="navbar-item">
-            <Link to="/" className="navbar-link">
+            <Link to="/" className="navbar-link" onClick={handleLinkClick}>
               Home
             </Link>
           </li>
@@ -38,12 +42,12 @@ export function Navigation() {
             {activeDropdown === 'about' && (
               <ul className="dropdown-menu">
                 <li>
-                  <Link to="/about-company" className="dropdown-link">
+                  <Link to="/about-company" className="dropdown-link" onClick={handleLinkClick}>
                     About Company
                   </Link>
                 </li>
                 <li>
-                  <Link to="/leadership" className="dropdown-link">
+                  <Link to="/leadership" className="dropdown-link" onClick={handleLinkClick}>
                     Leadership
                   </Link>
                 </li>
@@ -61,17 +65,17 @@ export function Navigation() {
             {activeDropdown === 'services' && (
               <ul className="dropdown-menu">
                 <li>
-                  <Link to="/consulting" className="dropdown-link">
+                  <Link to="/consulting" className="dropdown-link" onClick={handleLinkClick}>
                     Consulting
                   </Link>
                 </li>
                 <li>
-                  <Link to="/training" className="dropdown-link">
+                  <Link to="/training" className="dropdown-link" onClick={handleLinkClick}>
                     Training
                   </Link>
                 </li>
                 <li>
-                  <Link to="/app-development" className="dropdown-link">
+                  <Link to="/app-development" className="dropdown-link" onClick={handleLinkClick}>
                     App Development
                   </Link>
                 </li>
@@ -89,12 +93,12 @@ export function Navigation() {
             {activeDropdown === 'expertise' && (
               <ul className="dropdown-menu">
                 <li>
-                  <Link to="/developers" className="dropdown-link">
+                  <Link to="/developers" className="dropdown-link" onClick={handleLinkClick}>
                     Our Team
                   </Link>
                 </li>
                 <li>
-                  <Link to="/tech-stacks" className="dropdown-link">
+                  <Link to="/tech-stacks" className="dropdown-link" onClick={handleLinkClick}>
                     Tech Stacks
                   </Link>
                 </li>
@@ -112,12 +116,12 @@ export function Navigation() {
             {activeDropdown === 'blogs' && (
               <ul className="dropdown-menu">
                 <li>
-                  <Link to="/hpt-insights" className="dropdown-link">
+                  <Link to="/hpt-insights" className="dropdown-link" onClick={handleLinkClick}>
                     HPT Insights
                   </Link>
                 </li>
                 <li>
-                  <Link to="/white-papers" className="dropdown-link">
+                  <Link to="/white-papers" className="dropdown-link" onClick={handleLinkClick}>
                     White Papers
                   </Link>
                 </li>
@@ -135,12 +139,12 @@ export function Navigation() {
             {activeDropdown === 'collaborations' && (
               <ul className="dropdown-menu">
                 <li>
-                  <Link to="/partners" className="dropdown-link">
+                  <Link to="/partners" className="dropdown-link" onClick={handleLinkClick}>
                     Partners
                   </Link>
                 </li>
                 <li>
-                  <Link to="/clients" className="dropdown-link">
+                  <Link to="/clients" className="dropdown-link" onClick={handleLinkClick}>
                     Clients
                   </Link>
                 </li>
@@ -149,13 +153,13 @@ export function Navigation() {
           </li>
 
           <li className="navbar-item">
-            <Link to="/awards" className="navbar-link">
+            <Link to="/awards" className="navbar-link" onClick={handleLinkClick}>
               Awards & Recognition
             </Link>
           </li>
 
           <li className="navbar-item">
-            <Link to="/contact" className="navbar-link contact-button">
+            <Link to="/contact" className="navbar-link contact-button" onClick={handleLinkClick}>
               ContactUs
             </Link>
           </li>

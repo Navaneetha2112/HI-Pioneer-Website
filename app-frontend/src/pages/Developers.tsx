@@ -2,30 +2,30 @@ export function Developers() {
   const developers = [
     {
       id: 1,
-      name: 'Alice Rodriguez',
+      name: 'Ayesha Khan',
       role: 'Senior Full Stack Developer',
-      bio: 'Expert in React, Node.js, and cloud technologies',
+      bio: 'Builds web applications with React, TypeScript, and scalable cloud APIs.',
       image: '👩‍💻'
     },
     {
       id: 2,
-      name: 'Bob Thompson',
+      name: 'Rahul Menon',
       role: 'DevOps Engineer',
-      bio: 'Kubernetes and cloud infrastructure specialist',
+      bio: 'Automates releases, monitoring, and infrastructure for reliable product delivery.',
       image: '⚙️'
     },
     {
       id: 3,
-      name: 'Carol Martinez',
+      name: 'Maya Desai',
       role: 'Mobile Developer',
-      bio: 'Native iOS and Android development expert',
+      bio: 'Creates polished mobile experiences for Android and iOS platforms.',
       image: '📱'
     },
     {
       id: 4,
-      name: 'David Lee',
+      name: 'Karan Iyer',
       role: 'Backend Engineer',
-      bio: 'Java, Python, and microservices architecture',
+      bio: 'Designs resilient APIs and backend systems for data-driven products.',
       image: '🖥️'
     },
   ];

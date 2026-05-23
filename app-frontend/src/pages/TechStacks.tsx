@@ -1,11 +1,11 @@
 export function TechStacks() {
   const stacks = [
-    { category: 'Frontend', technologies: ['React', 'TypeScript', 'Vue.js', 'Svelte', 'Tailwind CSS'] },
-    { category: 'Backend', technologies: ['Node.js', 'Java', 'Python', 'Go', 'Ruby on Rails'] },
-    { category: 'Databases', technologies: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch'] },
+    { category: 'Frontend', technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Next.js'] },
+    { category: 'Backend', technologies: ['Node.js', 'Java', 'Spring Boot', 'Python', 'Express'] },
+    { category: 'Databases', technologies: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Firebase'] },
     { category: 'Cloud & DevOps', technologies: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes'] },
     { category: 'Mobile', technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin'] },
-    { category: 'Tools & Platforms', technologies: ['Git', 'Jenkins', 'GitLab CI', 'Terraform', 'Grafana'] },
+    { category: 'Tools & Platforms', technologies: ['Git', 'GitHub', 'Jenkins', 'Terraform', 'Figma'] },
   ];
 
   return (

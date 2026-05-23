@@ -2,44 +2,44 @@ export function Awards() {
   const awards = [
     {
       id: 1,
-      title: 'Best Technology Consulting Firm 2024',
-      organization: 'Tech Innovation Awards',
-      year: 2024,
+      title: 'Fastest Growing Startup in Tech Services',
+      organization: 'Emerging Tech Awards',
+      year: 2026,
       icon: '🏆'
     },
     {
       id: 2,
-      title: 'Excellence in Digital Transformation',
-      organization: 'Business Excellence Council',
-      year: 2024,
+      title: 'Best App Development Partner',
+      organization: 'Digital Product Awards',
+      year: 2025,
       icon: '⭐'
     },
     {
       id: 3,
-      title: 'Top App Development Company',
-      organization: 'Global Developer Report',
-      year: 2023,
+      title: 'Outstanding Startup Growth Support',
+      organization: 'Innovation Excellence Forum',
+      year: 2025,
       icon: '🥇'
     },
     {
       id: 4,
-      title: 'Customer Choice Award',
-      organization: 'Industry Review Platform',
-      year: 2023,
+      title: 'Customer Satisfaction Leadership',
+      organization: 'Client Choice Awards',
+      year: 2024,
       icon: '👍'
     },
     {
       id: 5,
-      title: 'Innovation Leadership Award',
-      organization: 'Tech Leaders Association',
-      year: 2023,
+      title: 'Top Training & Enablement Provider',
+      organization: 'Tech Learning Awards',
+      year: 2024,
       icon: '🚀'
     },
     {
       id: 6,
-      title: 'Best Place to Work in Tech',
-      organization: 'Career Excellence Network',
-      year: 2023,
+      title: 'Best Startup Culture',
+      organization: 'Startup Workplace Awards',
+      year: 2024,
       icon: '❤️'
     },
   ];

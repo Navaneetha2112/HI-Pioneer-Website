@@ -2,30 +2,30 @@ export function Clients() {
   const clients = [
     {
       id: 1,
-      name: 'Global Finance Corp',
-      industry: 'Financial Services',
-      testimonial: 'HPT Solutions delivered exceptional results on our digital transformation project',
-      logo: '💳'
+      name: 'LaunchEdge',
+      industry: 'SaaS',
+      testimonial: 'HiPioneer helped us launch our MVP in weeks instead of months and stay lean through every iteration.',
+      logo: '🚀'
     },
     {
       id: 2,
-      name: 'RetailMax Group',
-      industry: 'Retail',
-      testimonial: 'Outstanding support and expertise throughout our e-commerce platform development',
+      name: 'MarketHive',
+      industry: 'Retail Tech',
+      testimonial: 'Their app development and integration expertise gave us a reliable platform for rapid growth.',
       logo: '🛍️'
     },
     {
       id: 3,
-      name: 'HealthFirst Medical',
-      industry: 'Healthcare',
-      testimonial: 'Their team helped us build a HIPAA-compliant mobile application',
+      name: 'WellNest Health',
+      industry: 'Health Tech',
+      testimonial: 'The team delivered a secure, user-friendly telehealth experience tailored to our roadmap.',
       logo: '⚕️'
     },
     {
       id: 4,
-      name: 'EduTech Solutions',
-      industry: 'Education',
-      testimonial: 'Impressive execution and innovative approach to our learning management system',
+      name: 'Learnly',
+      industry: 'EdTech',
+      testimonial: 'Their startup-friendly training helped our team adopt modern practices and ship faster.',
       logo: '🎓'
     },
   ];
@@ -34,7 +34,7 @@ export function Clients() {
     <div className="page">
       <section className="content-section">
         <h1>Our Clients</h1>
-        <p>Trusted by leading organizations across various industries</p>
+        <p>We partner with growing businesses and startups to build scalable digital products.</p>
 
         <div className="clients-grid">
           {clients.map(client => (

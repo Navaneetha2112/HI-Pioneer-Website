@@ -1,11 +1,11 @@
 export function Partners() {
   const partners = [
-    { id: 1, name: 'TechCorp International', logo: '🏢' },
-    { id: 2, name: 'Cloud Solutions Inc', logo: '☁️' },
-    { id: 3, name: 'DataHub Systems', logo: '📊' },
-    { id: 4, name: 'SecureNet Technologies', logo: '🔒' },
-    { id: 5, name: 'InnovateLabs', logo: '🚀' },
-    { id: 6, name: 'Digital Ventures', logo: '💼' },
+    { id: 1, name: 'CloudWave', logo: '☁️' },
+    { id: 2, name: 'SecureGrid', logo: '🔒' },
+    { id: 3, name: 'DataFlow Labs', logo: '📊' },
+    { id: 4, name: 'LaunchDeck', logo: '🚀' },
+    { id: 5, name: 'CodeForge', logo: '💻' },
+    { id: 6, name: 'GrowthPulse', logo: '📈' },
   ];
 
   return (

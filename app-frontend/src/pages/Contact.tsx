@@ -86,8 +86,8 @@ export function Contact() {
   return (
     <div className="page">
       <section className="content-section">
-        <h1>Contact Us</h1>
-        <p>Get in touch with HPT Solutions. We'd love to hear from you.</p>
+        <h1>Contact HiPioneer Technologies</h1>
+        <p>Ready to launch your next digital product? Tell us about your project and we’ll connect you with the right team.</p>
 
         <div className="contact-container">
           <div className="contact-info">
