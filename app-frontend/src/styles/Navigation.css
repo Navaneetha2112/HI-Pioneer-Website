@@ -15,15 +15,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
 }
 
 .navbar-logo {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: #00d4ff;
   text-decoration: none;
-  margin-right: 2rem;
+  margin-right: 1rem;
   transition: color 0.3s ease;
 }
 
@@ -34,10 +34,58 @@
 .navbar-menu {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 1.25rem;
   margin: 0;
   padding: 0;
   align-items: center;
+}
+
+/* Mobile toggle button */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+  position: relative;
+  transition: background 0.25s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+  transition: transform 0.25s ease, top 0.25s ease, opacity 0.25s ease;
+}
+
+.hamburger::before { top: -7px; }
+.hamburger::after { top: 7px; }
+
+.hamburger.open {
+  background: transparent;
+}
+
+.hamburger.open::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.hamburger.open::after {
+  top: 0;
+  transform: rotate(-45deg);
 }
 
 .navbar-item {
@@ -47,13 +95,13 @@
 .navbar-link {
   color: white;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.45rem 0.8rem;
   border-radius: 4px;
   transition: all 0.3s ease;
   cursor: pointer;
   background: none;
   border: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-family: inherit;
 }
 
@@ -124,8 +172,21 @@
 }
 
 @media (max-width: 768px) {
+  .mobile-toggle { display: block; }
   .navbar-menu {
     gap: 1rem;
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: #1a1a2e;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+  }
+
+  .navbar-menu.mobile-open {
+    display: flex;
   }
 
   .navbar-link {

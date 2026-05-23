@@ -4,10 +4,13 @@ import '../styles/Navigation.css';
 
 export function Navigation() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
+
+  const toggleMobile = () => setMobileOpen(!mobileOpen);
 
   return (
     <nav className="navbar">
@@ -15,7 +18,10 @@ export function Navigation() {
         <Link to="/" className="navbar-logo">
           HPT Solutions
         </Link>
-        <ul className="navbar-menu">
+        <button className="mobile-toggle" aria-label="Toggle navigation" onClick={toggleMobile}>
+          <span className={`hamburger ${mobileOpen ? 'open' : ''}`}></span>
+        </button>
+        <ul className={`navbar-menu ${mobileOpen ? 'mobile-open' : ''}`}>
           <li className="navbar-item">
             <Link to="/" className="navbar-link">
               Home
